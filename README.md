@@ -1,4 +1,4 @@
-# TEMPLATE-REACT-COMPONENT-LIB
+# react-github-card
 
 Template for quickly creating a React component library.
 Supports Typescript and Sass out of the box.
