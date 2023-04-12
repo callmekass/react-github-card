@@ -1,12 +1,18 @@
-.github-card {
-  border: 2px solid rgb(89, 89, 89);
+a.github-card {
+  display: block;
+  border: 2px solid #808080;
   background-color: transparent;
   border-radius: 6px;
   padding: 10px 10px;
+  text-decoration: none;
+  color: black;
   transition: all 0.25s ease;
-  cursor: pointer;
 }
 
-.github-card:hover {
-  border-color: black;
+a.github-card:hover {
+  border-color: #000;
+}
+
+a.github-card > p {
+  margin: 0;
 }
