@@ -1,2 +1,13 @@
-@import './colors.scss';
-@import './button.scss';
+.github-card {
+  border: 2px solid rgb(89, 89, 89);
+  background-color: transparent;
+  border-radius: 6px;
+  padding: 10px 10px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.github-card:hover {
+  border-color: black;
+  background-color: #f9f9f9;
+}
