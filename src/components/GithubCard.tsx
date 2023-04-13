@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faStar, faEye } from '@fortawesome/free-regular-svg-icons';
 
 export interface GithubCardProps
@@ -26,7 +26,6 @@ export const GithubCard: React.FC<GithubCardProps> = ({ children, apiUrl }) => {
         setSrcUrl(data.html_url);
         setStars(data.stargazers_count);
         setSubs(data.subscribers_count);
-        setTopics(data.topics);
         fetch(data.languages_url)
           .then((lang_response) => lang_response.json())
           .then((lang_data) => {
@@ -37,21 +36,21 @@ export const GithubCard: React.FC<GithubCardProps> = ({ children, apiUrl }) => {
   console.log(langs);
   return (
     <a className="gh-card" href={srcUrl} target="_blank">
-      <div className="gh-header">{name}</div>
-      <div>{desc}</div>
-      <div>{topics} </div>
-      <div>{langs}</div>
-      <div>
-        <FontAwesomeIcon className="gh-stars" icon={faStar} />
-        {stars}
+      <div id="gh-header">
+        {name}
+        <FontAwesomeIcon
+          className="gh-link gh-fa"
+          icon={faArrowUpRightFromSquare}
+        />
       </div>
-      <div>
-        <FontAwesomeIcon className="gh-watchers" icon={faEye} />
+      <div id="gh-desc">{desc}</div>
+      <div id="gh-stats">
+        <FontAwesomeIcon className="gh-stars gh-fa" icon={faStar} />
+        {stars}
+        <FontAwesomeIcon className="gh-watchers gh-fa" icon={faEye} />
         {subs}
       </div>
-      <div>
-        <FontAwesomeIcon className="gh-source" icon={faCode} /> View Source Code
-      </div>
+      <div>{langs}</div>
     </a>
   );
 };

@@ -1,37 +1,56 @@
 a.gh-card {
   display: block;
-  border: 2px solid #808080;
+  border: 1px solid #b0b0b0;
   background-color: transparent;
   border-radius: 8px;
   text-decoration: none;
   color: #000;
   transition: all 0.25s ease;
   background-color: white;
+  max-width: 400px;
+  padding: 8px 8px 4px 8px;
   font-size: 0.9rem;
+}
+
+#gh-header > svg {
+  color: #b0b0b0;
+  transition: all 0.25s ease;
 }
 
 a.gh-card:hover {
   border-color: #000;
+
+  #gh-header > svg {
+    color: black;
+  }
 }
 
-a.gh-card > div {
-  margin: 0px 8px;
+#gh-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 1rem;
 }
 
-a.gh-card > div:first-child {
+#gh-desc {
+  opacity: 0.9;
+}
+
+#gh-stats {
   margin-top: 8px;
-}
-
-a.gh-card > div:last-child {
-  margin-bottom: 4px;
-}
-
-.gh-header {
-  font-size: 1.1rem;
 }
 
 .gh-stars,
 .gh-watchers,
 .gh-source {
-  margin-right: 4px;
+  margin-right: 2px;
+}
+
+#gh-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+#gh-stats svg:not(:first-child) {
+  margin-left: 16px;
 }
