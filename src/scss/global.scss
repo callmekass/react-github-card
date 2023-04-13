@@ -1,18 +1,37 @@
-a.github-card {
+a.gh-card {
   display: block;
   border: 2px solid #808080;
   background-color: transparent;
-  border-radius: 6px;
-  padding: 10px 10px;
+  border-radius: 8px;
   text-decoration: none;
-  color: black;
+  color: #000;
   transition: all 0.25s ease;
+  background-color: white;
+  font-size: 0.9rem;
 }
 
-a.github-card:hover {
+a.gh-card:hover {
   border-color: #000;
 }
 
-a.github-card > p {
-  margin: 0;
+a.gh-card > div {
+  margin: 0px 8px;
+}
+
+a.gh-card > div:first-child {
+  margin-top: 8px;
+}
+
+a.gh-card > div:last-child {
+  margin-bottom: 4px;
+}
+
+.gh-header {
+  font-size: 1.1rem;
+}
+
+.gh-stars,
+.gh-watchers,
+.gh-source {
+  margin-right: 4px;
 }
