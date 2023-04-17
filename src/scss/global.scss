@@ -1,47 +1,39 @@
-a.gh-card {
+div.gh-card {
   display: block;
-  border: 1px solid #b0b0b0;
-  background-color: transparent;
-  border-radius: 8px;
+  border: 1px solid #737373;
+  border-radius: 4px;
   text-decoration: none;
-  color: #000;
+  color: #2e2e2e;
   transition: all 0.25s ease;
-  background-color: white;
   max-width: 400px;
   padding: 8px 8px 4px 8px;
   font-size: 0.9rem;
 }
 
-.gh-header > svg {
-  color: #b0b0b0;
-  transition: all 0.25s ease;
+.gh-card a {
+  text-decoration: none;
 }
 
-a.gh-card:hover {
-  border-color: #000;
-
-  .gh-header > svg {
-    color: black;
-  }
+.gh-card a:hover,
+.gh-card a:focus {
+  text-decoration: underline;
 }
 
 .gh-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 6px;
-  font-size: 1rem;
+  margin-bottom: 2px;
+  font-size: 1.2rem;
 }
 
 .gh-desc {
   opacity: 0.9;
 }
 
-.gh-stats > svg {
+.gh-card > div > svg {
   margin-right: 4px;
-}
-
-.gh-stats svg:not(:first-child) {
-  margin-left: 16px;
+  width: 1rem;
+  color: #464646;
 }
 
 .gh-bottom {

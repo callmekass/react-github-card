@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faArrowUpRightFromSquare,
   faCodeFork,
   faLink,
   faStar,
@@ -52,29 +51,31 @@ export const GithubCard: React.FC<GithubCardProps> = ({ children, apiUrl }) => {
   }, []);
   console.log(langs);
   return (
-    <a className="gh-card" href={srcUrl} target="_blank">
-      <div className="gh-header">
+    <div className="gh-card">
+      <a className="gh-header" href={srcUrl} target="_blank">
         {name}
-        <FontAwesomeIcon
-          className="gh-link gh-fa"
-          icon={faArrowUpRightFromSquare}
-        />
-      </div>
+      </a>
       <div className="gh-desc">{desc}</div>
       <div>{topics}</div>
       <div>{langs}</div>
-      <div className="gh-stats">
-        <FontAwesomeIcon className="gh-star gh-fa" icon={faStar} />
+      <div className="gh-stars">
+        <FontAwesomeIcon icon={faStar} />
         {starCount}
-        <FontAwesomeIcon className="gh-sub gh-fa" icon={faEye} />
+      </div>
+      <div className="gh-subs">
+        <FontAwesomeIcon icon={faEye} />
         {subCount}
-        <FontAwesomeIcon className="gh-fork gh-fa" icon={faCodeFork} />
+      </div>
+      <div className="gh-forks">
+        <FontAwesomeIcon icon={faCodeFork} />
         {forkCount}
-        <FontAwesomeIcon className="gh-fork gh-fa" icon={faLink} />
+      </div>
+      <div className="gh-homepage">
+        <FontAwesomeIcon icon={faLink} />
         <a href={homepage} target="_blank class">
           {homepage}
         </a>
       </div>
-    </a>
+    </div>
   );
 };

@@ -18,5 +18,5 @@ pfsense.args = {
 export const portfolio = Template.bind({});
 portfolio.args = {
   children: 'Github Card',
-  apiUrl: 'https://api.github.com/repos/callmekass/portfolio',
+  apiUrl: 'https://api.github.com/repos/callmekass/portfolio-website',
 };
